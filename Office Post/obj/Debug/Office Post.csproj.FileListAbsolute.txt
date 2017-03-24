@@ -1,0 +1,14 @@
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Debug\Office Post.exe.config
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Debug\Office Post.exe
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Debug\Office Post.pdb
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post.csprojResolveAssemblyReference.cache
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\MainWindow.g.cs
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\App.g.cs
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post_MarkupCompile.cache
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post_MarkupCompile.lref
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\MainWindow.baml
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post.g.resources
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office_Post.Properties.Resources.resources
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post.csproj.GenerateResource.Cache
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post.exe
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Debug\Office Post.pdb
