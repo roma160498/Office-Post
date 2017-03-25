@@ -24,10 +24,12 @@ namespace Office_Post
     {
 
         Byte[] info = new byte[1000];
-        List<string> members = new List<string>(); 
+        List<string> members = new List<string>();
+        private bool passwordCheck = false;
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void loadEmailsListButton_Click(object sender, RoutedEventArgs e)
@@ -41,10 +43,28 @@ namespace Office_Post
                 using (StreamReader sr = new StreamReader(myDialog.FileName, System.Text.Encoding.Default))
                 {
                     string line;
+                    //string[] perFr = new string[20];
+                    //int i = 0;
                     while ((line = sr.ReadLine()) != null)
                     {
                         members.Add(line);
+                        emailsListBox.Items.Add(new CheckBox { Content = line, IsChecked =true, IsEnabled=false});
+                        //perFr[i] = line;
+                        //i++;
                     }
+                    CheckBox ll = emailsListBox.Items[0] as CheckBox;
+                    ll.IsChecked = false;
+                     //= new string[] { "111", "222", "333", "444" };
+                    //List<string> itemsArray = new List<string>();
+                    //itemsArray.AddRange(perFr);
+                    //   listView.ItemsSource = members;
+                    //emailsListBox.ItemsSource = members;
+                    
+                    // ListBoxItem li = emailsListBox.Items[0] as ListBoxItem;
+                   // ListBoxItem lbi = emailsListBox.Items[0] as ListBoxItem;
+                    //emailsListBox.ItemContainerStyle =  new SolidColorBrush(Colors.Red);
+                    //lbi.Foreground = Brushes.Green;
+                    // emailsListBox.Items[0] = lbi;
                 }
             }
         }
@@ -55,8 +75,41 @@ namespace Office_Post
             string message;
             title = titleBox.Text;
             message = messageBox.Text;
-            EmailSender emailSender = new EmailSender(emailBox.Text, passwordBox.Text, nameBox.Text, receiverEmailBox.Text);
+            EmailSender emailSender = new EmailSender(emailBox.Text, passwordBox.Password, nameBox.Text);
             emailSender.SendEmail(title,message,members);
+        }
+
+        private void passwordBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+        }
+
+        private void passwordBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+                       
+         }
+
+        private void checkButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!passwordCheck)
+            {
+                passwordVisibleTextBox.Text = passwordBox.Password;
+                passwordBox.Visibility = Visibility.Hidden;
+                passwordVisibleTextBox.Visibility = Visibility.Visible;
+                passwordCheck = true;
+            }
+            else
+            {
+                passwordBox.Password = passwordVisibleTextBox.Text;
+                passwordBox.Visibility = Visibility.Visible;
+                passwordVisibleTextBox.Visibility = Visibility.Hidden;
+                passwordCheck = false;
+            }
+
+        }
+
+        private void entryButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

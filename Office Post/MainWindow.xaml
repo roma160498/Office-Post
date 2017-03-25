@@ -5,16 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Office_Post"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="20" Margin="53,10,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="108"/>
-        <TextBox x:Name="passwordBox" HorizontalAlignment="Left" Height="20" Margin="166,10,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="20" Margin="285,10,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="107"/>
-        <TextBox x:Name="receiverEmailBox" HorizontalAlignment="Left" Height="21" Margin="53,46,0,0" TextWrapping="Wrap" Text="RecEmail" VerticalAlignment="Top" Width="108"/>
-        <TextBox x:Name="messageBox" HorizontalAlignment="Left" Height="112" Margin="53,120,0,0" TextWrapping="Wrap" Text="message" VerticalAlignment="Top" Width="339"/>
-        <TextBox x:Name="titleBox" HorizontalAlignment="Left" Height="23" Margin="53,83,0,0" TextWrapping="Wrap" Text="title" VerticalAlignment="Top" Width="219"/>
-        <Button x:Name="submit" Content="Отправить" HorizontalAlignment="Left" Height="28" Margin="53,237,0,0" VerticalAlignment="Top" Width="108" Click="submit_Click"/>
-        <Button x:Name="loadEmailsListButton" Content="Загрузить список" HorizontalAlignment="Left" Height="57" Margin="397,10,0,0" VerticalAlignment="Top" Width="103" Click="loadEmailsListButton_Click"/>
+        Title="MainWindow" Height="462" Width="747.4">
+    <Grid Background="#FF8E8E8E">
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="28" Margin="82,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" FontSize="16" BorderBrush="Black" SelectionBrush="#FF36B91C"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="28" Margin="82,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" FontSize="16" BorderBrush="Black" SelectionBrush="#FF18FF00"/>
+        <TextBox x:Name="messageBox" HorizontalAlignment="Left" Height="205" Margin="10,174,0,0" TextWrapping="Wrap" Text="message" VerticalAlignment="Top" Width="520" BorderBrush="Black"/>
+        <TextBox x:Name="titleBox" HorizontalAlignment="Left" Height="28" Margin="82,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" BorderBrush="Black" FontSize="18"/>
+        <Button x:Name="submit" Content="Отправить" HorizontalAlignment="Left" Height="28" Margin="12,384,0,0" VerticalAlignment="Top" Width="108" Click="submit_Click"/>
+        <Button x:Name="loadEmailsListButton" Content="Загрузить список" HorizontalAlignment="Left" Height="28" Margin="359,109,0,0" VerticalAlignment="Top" Width="171" Click="loadEmailsListButton_Click" FontSize="16" FontFamily="Chicago"/>
+        <ListBox x:Name="emailsListBox" HorizontalAlignment="Left" Height="367" Margin="540,12,0,0" VerticalAlignment="Top" Width="165" BorderBrush="Black" Background="#FFDFDFDF"/>
+        <Label x:Name="label" Content="Email:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Background="#FF8E8E8E" Foreground="#FF383737" FontSize="16" FontFamily="Chicago" Height="30"/>
+        <Label x:Name="label_Copy" Content="Пароль:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Background="#FF8E8E8E" Foreground="#FF383737" FontSize="16" FontFamily="Chicago" Height="30"/>
+        <Label x:Name="label_Copy1" Content="Имя:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Background="#FF8E8E8E" Foreground="#FF383737" FontSize="16" FontFamily="Chicago" Height="30"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="28" Margin="82,43,0,0" VerticalAlignment="Top" Width="242" FontSize="16" SelectionBrush="Black" BorderBrush="Black" MouseEnter="passwordBox_MouseEnter" Foreground="#FF403D3D"/>
+        <TextBox x:Name="passwordVisibleTextBox" HorizontalAlignment="Left" Height="28" Margin="82,43,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="242" BorderBrush="Black" FontSize="16" Visibility="Hidden">
+        </TextBox>
+        <Button x:Name="checkButton" HorizontalAlignment="Left" Height="28" Margin="325,43,0,0" VerticalAlignment="Top" Width="24" Click="checkButton_Click" Background="White" BorderBrush="Black">
+            <Grid RenderTransformOrigin="-0.019,-1.154">
+                <Image Source="eye.png"/>
+            </Grid>
+        </Button>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="91" Margin="359,12,0,0" VerticalAlignment="Top" Width="171" Source="rubineta.jpg"/>
+        <Label x:Name="label_Copy2" Content="Тема:" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Background="#FF8E8E8E" Foreground="#FF383737" FontSize="16" FontFamily="Chicago" Height="30"/>
+        <Label x:Name="label_Copy3" Content="Сообщение:" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Background="#FF8E8E8E" Foreground="#FF383737" FontSize="16" FontFamily="Chicago" Height="35" Width="110"/>
+
 
     </Grid>
 </Window>

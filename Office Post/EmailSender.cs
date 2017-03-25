@@ -13,21 +13,19 @@ namespace Office_Post
     {
         private string senderEmail;
         private string name;
-        private string receiverEmail;
         private string password;
         private string domain = "";
 
-        public EmailSender(string senderEmail, string password, string name, string receiverEmail)
+        public EmailSender(string senderEmail, string password, string name)
         {
             this.senderEmail = senderEmail;
             this.name = name;
-            //this.receiverEmail = receiverEmail;
             this.password = password;
         }
         public void SendEmail(string header, string message,List<string> members)
         {
             MailAddress Sender = new MailAddress(senderEmail, name);
-
+            var abc = Sender.User;
             int pos = senderEmail.IndexOf('@');
             for (int i = pos + 1; i < senderEmail.Length; i++)
                 domain += senderEmail[i];
@@ -38,13 +36,10 @@ namespace Office_Post
             {
                 MailAddress Receiver = new MailAddress(members[j]);
                 MailMessage messageObject = new MailMessage(Sender, Receiver);
-
                 messageObject.Subject = header;
                 messageObject.Body = message;
-               
-            
-            smtp.Send(messageObject);
-
+                messageObject.Attachments.Add(new Attachment(@"F:\PROJECTS\Office post\Office Post\Office Post\Прайс лист № 10 от 01.03.17.- Белсанита М.xls"));
+                smtp.Send(messageObject);
             }
         }
     }
