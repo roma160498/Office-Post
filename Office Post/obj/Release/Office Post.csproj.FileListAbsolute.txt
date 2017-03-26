@@ -1,0 +1,13 @@
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Release\Office Post.exe.config
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Release\Office Post.exe
+F:\PROJECTS\Office post\Office Post\Office Post\bin\Release\Office Post.pdb
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\MainWindow.g.cs
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\App.g.cs
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post_MarkupCompile.cache
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post_MarkupCompile.lref
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\MainWindow.baml
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.g.resources
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office_Post.Properties.Resources.resources
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.csproj.GenerateResource.Cache
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.exe
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.pdb
