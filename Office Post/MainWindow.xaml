@@ -16,7 +16,7 @@
         </Grid.OpacityMask>
         <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="28" Margin="83,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" FontSize="16" BorderBrush="Black"  TextChanged="emailBox_TextChanged"/>
         <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="28" Margin="83,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" FontSize="16" BorderBrush="Black"  TextChanged="nameBox_TextChanged"/>
-        <TextBox xml:lang="ru-RU" x:Name="messageBox" HorizontalAlignment="Left" Height="205" Margin="11,195,0,0" TextWrapping="Wrap" AcceptsTab="true"  AcceptsReturn="True" VerticalAlignment="Top" Width="520" BorderBrush="Black" FontSize="14" SpellCheck.IsEnabled="True" TextChanged="messageBox_TextChanged"/>
+        <TextBox xml:lang="ru-RU" x:Name="messageBox" HorizontalAlignment="Left" Height="205" Margin="11,195,0,0" TextWrapping="Wrap" AcceptsTab="true"  AcceptsReturn="True" VerticalAlignment="Top" Width="520" BorderBrush="Black" FontSize="14" SpellCheck.IsEnabled="True" TextChanged="messageBox_TextChanged" VerticalScrollBarVisibility="Auto"/>
         <TextBox x:Name="titleBox" HorizontalAlignment="Left" Height="28" Margin="83,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" BorderBrush="Black" FontSize="18" TextChanged="titleBox_TextChanged"/>
         <Button x:Name="submit" Content="Отправить" HorizontalAlignment="Left" Height="28" Margin="14,405,0,0" VerticalAlignment="Top" Width="123.4" Click="submit_Click" FontSize="16" FontFamily="Chicago" IsEnabled="False"/>
         <Button x:Name="loadEmailsListButton" Content="Список адресов" HorizontalAlignment="Left" Height="44" Margin="361,114,0,0" VerticalAlignment="Top" Width="171" Click="loadEmailsListButton_Click" FontSize="16" FontFamily="Chicago"/>
@@ -54,6 +54,7 @@
         </Menu>
         <Button x:Name="signatureButton" Content="Подпись" HorizontalAlignment="Left" Height="28" Margin="142.4,405,0,0" VerticalAlignment="Top" Width="123.4" FontSize="16" FontFamily="Chicago" Click="signatureButton_Click"/>
         <Button x:Name="reportBox" Content="Отчет" HorizontalAlignment="Left" Height="28" Margin="279.2,405,0,0" VerticalAlignment="Top" Width="123.4" FontSize="16" FontFamily="Chicago" Click="reportBox_Click" IsEnabled="False"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="28" Margin="122,162,0,0" VerticalAlignment="Top" Width="409" Foreground="#FF00971C"/>
 
 
     </Grid>

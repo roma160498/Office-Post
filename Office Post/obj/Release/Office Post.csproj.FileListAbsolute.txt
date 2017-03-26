@@ -11,3 +11,4 @@ F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office_Post.Properti
 F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.csproj.GenerateResource.Cache
 F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.exe
 F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.pdb
+F:\PROJECTS\Office post\Office Post\Office Post\obj\Release\Office Post.csprojResolveAssemblyReference.cache

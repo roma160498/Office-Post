@@ -43,6 +43,7 @@ namespace Office_Post
 
         private void loadEmailsListButton_Click(object sender, RoutedEventArgs e)
         {
+            progressBar.Value = 0;
             members.Clear();
             emailsListBox.Items.Clear();
             OpenFileDialog myDialog = new OpenFileDialog();
@@ -77,27 +78,12 @@ namespace Office_Post
             string message;
             title = titleBox.Text;
             message = messageBox.Text;
-            emailSender = new EmailSender(emailBox.Text, passwordBox.Password, nameBox.Text,emailsListBox);
-            emailSender.SendEmail(title,message,members,attachList);
+            progressBar.Value = 0;
+            emailSender = new EmailSender(emailBox.Text, passwordBox.Password, nameBox.Text,emailsListBox,progressBar, title, message, members, attachList);
+            System.Threading.Thread secThread = new System.Threading.Thread(new System.Threading.ThreadStart(emailSender.SendEmail));
+            //emailSender.SendEmail(title,message,members,attachList);
+            secThread.Start();
             reportBox.IsEnabled = true;
-            try
-            {
-                using (BinaryReader reader = new BinaryReader(File.Open(fullPath + "\\report.bin", FileMode.Open)))
-                {
-                    reportWay = reader.ReadString();
-                }
-                using (StreamWriter sw = new StreamWriter(reportWay))
-                {
-                    if (emailSender != null)
-                    {
-                        foreach (string rep in emailSender.report)
-                        {
-                            sw.WriteLine(rep);
-                        }
-                    }
-                }
-            }
-            catch { }
         }
 
         private void checkButton_Click(object sender, RoutedEventArgs e)
